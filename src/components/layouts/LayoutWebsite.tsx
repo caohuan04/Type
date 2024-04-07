@@ -1,6 +1,6 @@
-import Header from '../Header'
 import { Outlet } from 'react-router-dom'
-import Footer from '../Footer'
+import Header from '../client/Header'
+import Footer from '../client/Footer'
 
 const LayoutWebsite = () => {
     return (
