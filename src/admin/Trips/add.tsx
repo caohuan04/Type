@@ -2,6 +2,7 @@ import { Link, useLoaderData, useNavigate } from "react-router-dom"
 import { IBusHouse, Stations } from "../../interfaces/trips"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { postTrip } from "../../api/trip.api"
+import moment from "moment"
 
 type AddTripForm = {
     busHouseId: string
@@ -24,7 +25,7 @@ const AddTrip = () => {
     const onSubmit: SubmitHandler<AddTripForm> = async (data) => {
         try {
             await postTrip(data)
-            navigate("/trips")
+            navigate("/admin")
         } catch (error) {
             alert("Thêm mới chuyến đi thất bại")
         }
@@ -58,7 +59,7 @@ const AddTrip = () => {
                                 Thời gian bắt đầu</label>
                             <input
                                 type="datetime-local"
-                                placeholder="Thời gian khởi hành"
+                                min={moment().add(1, 'hours').format('MMMM Do YYYY, h:mm:ss a')}
                                 className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 {...register("startTime")} />
                         </div>
@@ -107,10 +108,10 @@ const AddTrip = () => {
                                 {...register("toStation")} />
                         </div>
                     </div>
-                    <Link to={`/admin`} type="submit"
+                    <button type="submit"
                         className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg px-6 py-2.5">
                         Thêm mới
-                    </Link>
+                    </button>
                 </form>
             </div>
         </div>

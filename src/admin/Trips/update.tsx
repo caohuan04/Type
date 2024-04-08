@@ -23,7 +23,6 @@ const UpdateTrip = () => {
     } = useForm<AddTripForm>({
         defaultValues: trip
     })
-    console.log(busHouses, stations, trip);
 
     const onSubmit: SubmitHandler<AddTripForm> = async (data) => {
         if (typeof trip.id === 'undefined') {

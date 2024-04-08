@@ -12,9 +12,9 @@ const SideBar = () => {
                             </Link>
                         </li>
                         <li>
-                            <a className="flex items-center rounded-md px-4 py-2 bg-gray-100 font-medium duration-300 ease-in-out hover:bg-gray-300">
+                            <Link to={`history`} className="flex items-center rounded-md px-4 py-2 bg-gray-100 font-medium duration-300 ease-in-out hover:bg-gray-300">
                                 Lịch sử chuyến đi
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <Link to={`trips/add`} className="flex items-center rounded-md px-4 py-2 bg-gray-100 font-medium duration-300 ease-in-out hover:bg-gray-300">

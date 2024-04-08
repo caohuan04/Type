@@ -9,7 +9,7 @@
       "isBooked": 10,
       "busHouseId": "2",
       "stationId": "1",
-      "startTime": "2024-04-08T00:52",
+      "startTime": "2024-04-09T00:52",
       "fromStation": "hà nội",
       "toStation": "Đà nẵng"
     },
@@ -52,6 +52,26 @@
       "fromStation": "hà nội",
       "toStation": "hải phòng",
       "id": "-AMJHY6"
+    },
+    {
+      "busHouseId": "1",
+      "startTime": "2024-04-11T09:56",
+      "seats": "12",
+      "price": "120000",
+      "stationId": "1",
+      "fromStation": "hà nội",
+      "toStation": "Đà nẵng",
+      "id": "PLYOPiX"
+    },
+    {
+      "busHouseId": "1",
+      "startTime": "2024-04-10T09:56",
+      "seats": "12",
+      "price": "12000",
+      "stationId": "1",
+      "fromStation": "hà nội",
+      "toStation": "Đà nẵng",
+      "id": "Ha72g6G"
     }
   ],
   "stations": [
@@ -96,7 +116,28 @@
       "phone": "0987654321"
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "email": "hung99379@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "email": "huanhcph35218@fpt.edu.vn",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "email": "huanhcph35218@fpt.edu.vn",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "email": "hung99379@gmail.com",
+      "password": "123456",
+      "id": 4
+    }
+  ],
   "posts": [
     {
       "id": "1",

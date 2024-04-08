@@ -4,8 +4,8 @@ import Content from "./client/Content"
 import MenuBanner from "./client/MenuBanner"
 import PopContainer from "./client/PopContainer"
 import { getTrips } from "../api/trip.api"
-import Search from "./Search"
 import Ticket from "./client/Ticket"
+import Search from "./client/Search"
 
 
 const Client = () => {
@@ -30,7 +30,7 @@ const Client = () => {
 
             </div>
             <div className="py-5 w-[980px] mx-auto flex flex-col gap-5">
-                {trips.map(items => <Ticket key={items.id} />)}
+                {trips.map((trip) => <Ticket key={trip.id} trip={trip} />)}
             </div>
 
             <div className="py-5 w-[980px] mx-auto ">

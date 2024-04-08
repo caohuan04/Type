@@ -12,6 +12,9 @@ import { getBusHouses } from './api/busHouse.api'
 import { getStations } from './api/stations.api'
 import { getTripById } from './api/trip.api'
 import UpdateTrip from './admin/Trips/update'
+import TripHistory from './admin/Trips/history'
+import Register from './auth/Register'
+import Login from './auth/Login'
 
 const App = createBrowserRouter([
   {
@@ -50,8 +53,16 @@ const App = createBrowserRouter([
         },
         element: <UpdateTrip />
       },
-      { path: "dashboard", element: <Admin /> },
+      { path: "history", element: <TripHistory /> },
     ]
+  },
+  {
+    path: "register",
+    element: <Register />
+  },
+  {
+    path: "login",
+    element: <Login />
   },
   {
     path: "*",

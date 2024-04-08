@@ -1,10 +1,10 @@
 import { useState } from "react"
-import Search from "./Search"
 import MenuItem from "./detail/MenuItem"
 import SideBar from "./detail/SideBar"
 import Ticket from "./detail/Ticket"
 import { ITrip } from "../interfaces/trips"
 import { getTrips } from "../api/trip.api"
+import Search from "./detail/Search"
 
 const Detail = () => {
     const [trips, setTrips] = useState<ITrip[]>([]);
@@ -22,7 +22,7 @@ const Detail = () => {
                 <SideBar />
 
                 <div className="w-[730px] flex flex-col gap-4">
-                    {trips.map((trip) => <Ticket key={trip.id} trip={trip} />)}
+                    <Ticket />
 
                 </div>
 

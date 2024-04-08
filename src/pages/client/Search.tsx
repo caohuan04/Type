@@ -1,6 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form"
 import moment from "moment"
-import { useNavigate } from "react-router-dom"
 
 type SearchForm = {
     toStation: string,
@@ -10,15 +9,10 @@ type SearchForm = {
 }
 
 const Search = (props: { onSearch: (query: string) => void }) => {
-    const navigate = useNavigate();
-    const { register, formState: { errors }, handleSubmit } = useForm<SearchForm>()
+    const { register, handleSubmit } = useForm<SearchForm>()
     const onSubmit: SubmitHandler<SearchForm> = async (data) => {
         const query = new URLSearchParams(data)
-        console.log(query.toString());
-
         props.onSearch(query.toString())
-
-        navigate("/detail")
 
     }
     return (

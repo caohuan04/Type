@@ -15,7 +15,7 @@ const Header = () => {
                             <Link to="#" className="text-white hover:text-gray-300">Quản lý đơn hàng</Link>
                         </li>
                         <li>
-                            <Link to="#" className="text-white hover:text-gray-300">Mở bán vé trên Vexere</Link>
+                            <Link to="detail" className="text-white hover:text-gray-300">Chi tiết chuyến xe</Link>
                         </li>
                         <li>
                             <Link to="#" className="text-white hover:text-gray-300">Trở thành đối tác</Link>
@@ -26,7 +26,7 @@ const Header = () => {
                     <button className="bg-white hover:bg-gray-300 font-semibold py-2 px-4 rounded">
                         Hotline 24/7
                     </button>
-                    <Link to={`admin`} className="bg-white hover:bg-gray-300 font-semibold py-2 px-4 rounded">
+                    <Link to={`login`} className="bg-white hover:bg-gray-300 font-semibold py-2 px-4 rounded">
                         Đăng Nhập
                     </Link>
                 </div>
